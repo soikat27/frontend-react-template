@@ -4,46 +4,16 @@ A clean starter template for React projects that use **npm** and **Vite**. It gi
 
 This template is intentionally lightweight: no TypeScript, Sass, Prettier, or testing setup by default. Add those pieces only when a project actually needs them.
 
-## Included
-
-- Vite with `@vitejs/plugin-react` and hot module replacement
-- React 19
-- Local development through the Vite Dev Server
-- Production builds and a local preview of the built app
-- ESLint with recommended JavaScript rules, React Hooks, and React Refresh
-- Optional GitHub Pages deployment through `gh-pages`
-- A minimal `src/` layout with starter styles and `public/` assets
-
-## Project Structure
-
-```text
-frontend-react-template/
-├── public/
-│   ├── favicon.svg
-│   └── icons.svg
-├── src/
-│   ├── assets/
-│   ├── App.jsx
-│   ├── App.css
-│   ├── main.jsx
-│   └── index.css
-├── index.html
-├── vite.config.js
-├── eslint.config.js
-├── package.json
-└── README.md
-```
-
 ## Getting Started
 
-If this repository is marked as a GitHub template, click **Use this template** and create a new repository from it.
+This repository is marked as a GitHub template, click **Use this template** and create a new repository from it.
 
 Try it in the browser with [StackBlitz](https://stackblitz.com/github/soikat27/frontend-react-template).
 
 Or start locally with a clean copy (no commit history from this template):
 
 ```bash
-npx tiged soikat27/frontend-react-template my-app
+npx tiged soikat27/frontend-react-template <my-app>
 cd my-app
 ```
 
@@ -69,7 +39,6 @@ npm run build
 
 - `npm run dev` starts the local Vite development server.
 - `npm run build` creates a production build in `dist/`.
-- `npm run deploy` builds the project and publishes `dist/` to GitHub Pages.
 - `npm run preview` serves the production build locally so you can check it before deploying.
 - `npm run lint` checks project files with ESLint.
 
@@ -91,20 +60,6 @@ For editor support, install the ESLint extension if available in your code edito
 
 `vite.config.js` enables the React plugin and opens the browser automatically when you run the development server.
 
-## Deployment
-
-The deploy script runs:
-
-```bash
-npm run build && gh-pages -d dist
-```
-
-That builds the project, then publishes the generated `dist/` folder to a `gh-pages` branch. Before deploying a project made from this template to a GitHub project site, set `base` in `vite.config.js` to your repository path so asset URLs resolve correctly:
-
-```js
-base: '/my-repo/',
-```
-
 ## Customizing the Template
 
 After creating a new project from this template:
@@ -113,7 +68,6 @@ After creating a new project from this template:
 - Build your UI in `src/App.jsx`
 - Adjust styles in `src/App.css` and `src/index.css`
 - Put static files (favicons, images served as-is) in `public/`
-- Set `base` in `vite.config.js` if you plan to deploy to GitHub Pages
 - Update package metadata in `package.json`
 - Remove scripts or dependencies you do not need
 
