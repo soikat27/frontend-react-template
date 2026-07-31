@@ -85,7 +85,7 @@ Run checks from the terminal:
 npm run lint
 ```
 
-For editor support, install the ESLint extension in VS Code or Cursor. The extension should detect the package and config file in this repo. Use the project setup as the source of truth rather than relying only on global editor settings.
+For editor support, install the ESLint extension if available in your code editor (available in VS Code). The extension should detect the package and config file in this repo. Use the project setup as the source of truth rather than relying only on global editor settings.
 
 ## Vite Config
 
