@@ -1,6 +1,6 @@
 # Frontend React Template
 
-A clean starter template for React projects that use **npm** and **Vite**. It gives you a ready-to-run dev server, production builds, ESLint with React-aware rules, Vitest with React Testing Library, and a minimal `src/` structure.
+A clean starter template for React projects that use **npm** and **Vite**. It gives you a ready-to-run dev server, production builds, ESLint with React-aware rules, Vitest with React Testing Library, React Router for client-side routing, and a minimal `src/` structure.
 
 This template is intentionally lightweight: no TypeScript, Sass, or Prettier by default. Add those pieces only when a project actually needs them.
 
@@ -75,6 +75,21 @@ Put test files in `src/tests/` (for example `Something.test.jsx`). `src/tests/Ap
 import { describe, it, expect } from "vitest";
 ```
 
+## Routing
+
+This template uses **React Router** (`react-router`) for client-side routing. Route definitions live in `src/routes.jsx`. Add a route object with a `path` and an `element` for each page:
+
+```js
+const routes = [
+  {
+    path: "/",
+    element: <App />,
+  },
+];
+```
+
+`src/main.jsx` creates the browser router from that list and renders it with `RouterProvider`. Navigate between pages with React Router’s `<Link to="...">`, not a plain `<a href>`.
+
 ## Vite Config
 
 `vite.config.js` enables the React plugin and opens the browser automatically when you run the development server. The same file sets the Vitest environment to jsdom and points at `src/tests/setup.js`.
@@ -86,6 +101,7 @@ After creating a new project from this template:
 - Update the document title in `index.html`
 - Build your UI in `src/components/App.jsx`
 - Adjust styles in `src/styles/App.css` and `src/styles/index.css`
+- Add routes in `src/routes.jsx`
 - Add tests in `src/tests/`
 - Put static files (favicons, images served as-is) in `public/`
 - Update package metadata in `package.json`
